@@ -1,6 +1,6 @@
 @import "compass";
 @import url(https://fonts.googleapis.com/css?family=Abel);
-// font-family フォントの基本設定
+// font-family
 $baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 // colors
@@ -26,14 +26,14 @@ body{
 a {
   @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
   text-decoration: none;
-  //文字の装飾 装飾なし （下線を消す）
+   //文字の装飾 装飾なし （下線を消す）
 }
 
 /* Align
 ------------------------------------------------------------*/
 .text-center {
   text-align: center;
-  //行揃えの位置や、均等割付
+    //行揃えの位置や、均等割付
 }
 
 /* Layout
@@ -55,8 +55,8 @@ a {
 
 // desktop
 @media (min-width: 769px) {
-//表示サイズが769px以上なら769pxを最小値として表示させる
-}
+  //表示サイズが769px以上なら769pxを最小値として表示させる
+
   /* Base
   ------------------------------------------------------------*/
   a {
@@ -65,43 +65,51 @@ a {
       //テキストに下線を引く
     }
   }
+}//min-width: 769px
 /*Header
 ------------------------------------------------------------*/
 header {
-    .images{
-background-image:url("images/himawari.jpg");
-height:250px;
-width:100%;
- background-size: cover;
- background-position:center center;
-    }
-}
-    .text{
-      @include flex(1);
-    margin: 10px 0;                     // 上下にマージン
-    padding: 20px;
-    background-color: $baseColor;
-    @include border-radius(4px);
-    @include box-sizing(border-box);
-       text-align: center;
-    }
-    
-    //背景画像 モバイル表示では高さ250px
-    //背景画像 PC表示では横幅100％、高さ500px
-    @media (min-width: 769px){
+  .images{
+  background-image: url("images/himawari.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  } //images
+}// header
+
+ @media (min-width: 769px){   //背景画像 PC表示では横幅100％、高さ500px
   header {
     .images{
-      height:500px;
+       height: 500px; 
     }
+  } // min-width: 769px
 }
-} // min-width: 769px
+
 /*main------------*/
-main {
-  section {
-    padding: 30px 0;
-    background-color: $keyColor;
+
+section {
+  margin-bottom: 5px;
+  padding: 20px 0;
+  background-color: $keyColor;
+  
+  .container {
+    width: 90%;
+    @extend .block-center;
   }
- .box1 {
+  h1 {
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    @extend .abel;
+    font-size: 1.5rem;
+    @extend .uppercase;
+    text-align: center;
+  }
+
+.box1 {
     @include flex(1);
     margin-right: 10px;                     // 右にマージン
     margin-left:　10px;                    // 左にマージン
@@ -119,49 +127,60 @@ main {
     font-size: 2.2rem;
     color: $fontColor;
     text-align: center;
-    text-decoration: underline;    // アンダーライン（ほんとは区切りたい）
-    margin-bottom: 60px;
+    text-decoration: underline;    // アンダーライン
+    margin-bottom: 5px;
   }
-} // main
+}  // section
 
-// desktop
-@media (min-width: 1025px) {
-
-  section {
-    @include display-flex;
-      @include flex-direction(row);     // スキルボックスを横に並べる
-      justify-content: space-between;
-      
-    .title3{
-      margin: 0 10px;                   // 左右にマージン
-    }
-  } // section
-} // min-width: 1025px
-
- section {
- .button-natsu {
+/*-----ボタンのところ---*/
+  //section 
+    #botton {
+    padding: 10px 0;
+  background-color: $baseColor;
+    }  
+  .botton-natsu {
           margin: auto;
           text-align: center;
+          padding: 5px 0;
           width: 50%;
           display: block;
           color: $baseColor;
-          background-color: $subColor;
+          background-color: $keyColor;
           @extend .abel;
           @extend .uppercase;
           @include border-radius(4px);
           font-size: 1rem;
         }//button-natsu
-} // section
+
+// desktop
+@media (min-width: 1025px) {
+    #box{
+      .container{
+    @include display-flex;
+      @include flex-direction(row);   // スキルボックスを横に並べる
+      justify-content: space-between;
+      }
+    .box1{
+      margin: 0 10px;                   
+    }
+    }  // #container
+} // min-width: 1025px
 
 
 footer {
-  background-color: $subColor;
-  padding: 10px 0;
-  text-align: center;
+  .text {
+    margin: auto;
+    text-align: center;
+  background-color: $keyColor;
+  padding: 0px 0;
+ font-size: 1rem;
   color: #FFF;
 }
-
+}  // footer
 // desktop
 @media (min-width: 1025px) {
   
 }
+
+
+  
