@@ -63,7 +63,7 @@ header .images {
 /*main------------*/
 section {
   margin-bottom: 5px;
-  padding: 20px 0;
+  padding: 20px 20px;
   background-color: #eabf4c; }
   section .container {
     width: 90%; }
@@ -101,7 +101,7 @@ section {
 /*-----ボタンのところ---*/
 #botton {
   padding: 10px 0;
-  background-color: #FFFFFF; }
+  background-color: #eabf4c; }
 
 .botton-natsu {
   margin: auto;
@@ -109,8 +109,8 @@ section {
   padding: 5px 0;
   width: 50%;
   display: block;
-  color: #FFFFFF;
-  background-color: #eabf4c;
+  color: #eabf4c;
+  background-color: #FFFFFF;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;

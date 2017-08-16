@@ -90,7 +90,7 @@ header {
 
 section {
   margin-bottom: 5px;
-  padding: 20px 0;
+  padding: 20px 20px;
   background-color: $keyColor;
   
   .container {
@@ -136,7 +136,7 @@ section {
   //section 
     #botton {
     padding: 10px 0;
-  background-color: $baseColor;
+  background-color: $keyColor;
     }  
   .botton-natsu {
           margin: auto;
@@ -144,8 +144,8 @@ section {
           padding: 5px 0;
           width: 50%;
           display: block;
-          color: $baseColor;
-          background-color: $keyColor;
+          color: $keyColor;
+          background-color: $baseColor;
           @extend .abel;
           @extend .uppercase;
           @include border-radius(4px);
